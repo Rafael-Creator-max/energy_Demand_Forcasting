@@ -1,4 +1,6 @@
 import pandas as pd 
+import matplotlib.pyplot as plt
+
 
 print("Pandas werkt!")
 print(pd.__version__)
@@ -55,4 +57,16 @@ print("Duplicates")
 print(be_df.duplicated().sum())
 
 
+#Test graph
 
+plt.figure(figsize=(15,5))
+plt.plot(
+    be_df["DateUTC"]
+    ,be_df["Value"]
+)
+
+plt.title("Belgian Electricity Load")
+plt.xlabel("Date")
+plt.ylabel("Load")
+
+plt.show()
