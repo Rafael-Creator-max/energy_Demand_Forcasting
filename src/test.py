@@ -41,6 +41,10 @@ be_df["DateUTC"] = pd.to_datetime(
     ,format="%d-%m-%Y %H:%M"
 )
 
+be_df["Hour"] = be_df["DateUTC"].dt.hour
+be_df["Month"] = be_df["DateUTC"].dt.month 
+be_df["DayOfWeek"] = be_df["DateUTC"].dt.day
+
 print(be_df["DateUTC"].min())
 
 print("--------------------------------")
@@ -70,3 +74,25 @@ plt.xlabel("Date")
 plt.ylabel("Load")
 
 plt.show()
+
+print("--------------------------------")
+
+#Basic KPI's
+
+#Mean
+print("Mean: ",be_df["Value"].mean())
+
+#Max load 
+print("Max load:",be_df["Value"].max())
+
+#Minimum load
+print("Min load:",be_df["Value"].min())
+
+#Peak
+peak =  be_df.loc[be_df["Value"].idxmax()]
+print("Peak load is: ",peak)
+
+#Avg usage per hour
+hourly_avg = be_df.groupby("Hour")["Value"].mean()
+print("Hourly average is:", hourly_avg)
+
