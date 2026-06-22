@@ -53,11 +53,11 @@ print("--------------------------------")
 
 
 #Check missing values
-print("Missing values")
+print("Missing values \n")
 print(be_df.isnull().sum())
 
 #Check duplicates
-print("Duplicates")
+print("Duplicates\n")
 print(be_df.duplicated().sum())
 
 
@@ -79,20 +79,22 @@ print("--------------------------------")
 
 #Basic KPI's
 
+print("Basic KPIS\n")
+
 #Mean
-print("Mean: ",be_df["Value"].mean())
+print("Mean:\n",be_df["Value"].mean())
 
 #Max load 
-print("Max load:",be_df["Value"].max())
+print("Max load:\n",be_df["Value"].max())
 
 #Minimum load
-print("Min load:",be_df["Value"].min())
+print("Min load:\n",be_df["Value"].min())
 
 #Peak
 peak =  be_df.loc[be_df["Value"].idxmax()]
-print("Peak load is: ",peak)
+print("Peak load is:\n",peak)
 
 #Avg usage per hour
 hourly_avg = be_df.groupby("Hour")["Value"].mean()
-print("Hourly average is:", hourly_avg)
+print("Hourly average is:\n", hourly_avg)
 
