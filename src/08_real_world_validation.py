@@ -46,6 +46,38 @@ print("RMSE:", round(rmse, 2), "MW")
 print("MAPE:", round(mape, 2), "%")
 print("R²:", round(r2, 4))
 
+metrics = pd.DataFrame({
+    "Metric": [
+        "Mean Absolute Error",
+        "Root Mean Squared Error",
+        "Mean Absolute Percentage Error",
+        "R Squared"
+    ],
+    "Abbreviation": [
+        "MAE",
+        "RMSE",
+        "MAPE",
+        "R²"
+    ],
+    "Value": [
+        round(mae, 2),
+        round(rmse, 2),
+        round(mape, 2),
+        round(r2, 4)
+    ],
+    "Unit": [
+        "MW",
+        "MW",
+        "%",
+        ""
+    ]
+})
+
+metrics.to_csv(
+    "../data/processed/model_metrics.csv",
+    index=False
+)
+
 # Save comparison
 comparison.to_csv("../data/processed/belgium_load_real_world_validation.csv", index=False)
 
