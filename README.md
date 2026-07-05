@@ -43,19 +43,19 @@ flowchart LR
 
 ## Historical Analysis
 
-![Historical](images/historical_Analysis.png)
+![Historical](powerbi/historical_Analysis.png)
 
 ---
 
 ## Forecast Dashboard
 
-![Forecast](images/validation.png)
+![Forecast](powerbi/validation.png)
 
 ---
 
 ## Model Evaluation
 
-![Evaluation](images/model_Analysis.png)
+![Evaluation](powerbi/model_Analysis.png)
 
 ## Data
 
