@@ -90,6 +90,11 @@ plt.savefig(
     bbox_inches="tight"
 )
 
+importance.to_csv(
+    "../data/processed/feature_importance.csv",
+    index=False
+)
+
 plt.show()
 plt.close()
 
