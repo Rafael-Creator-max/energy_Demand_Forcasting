@@ -29,13 +29,17 @@ flowchart LR
 
 ## Scripts Description
 
-01_combine_load_files.py Combines yearly datasets.
-02_clean_data.py Cleans and prepares the data.
-03_eda.py Exploratory data analysis.
-04_feature_engineering.py Creates predictive features.
-05_forecast_model.py Trains the XGBoost model.
-06_evaluation.py Evaluates model performance.
-08_real_world_validation.py Tests the model on unseen data.
+## Scripts Description
+
+| Script                        | Description                                                      |
+| ----------------------------- | ---------------------------------------------------------------- |
+| `01_combine_load_files.py`    | Combines yearly datasets.                                        |
+| `02_clean_data.py`            | Cleans and prepares the data.                                    |
+| `03_eda.py`                   | Performs exploratory data analysis.                              |
+| `04_feature_engineering.py`   | Creates lag features, rolling averages and time-based variables. |
+| `05_forecast_model.py`        | Trains the XGBoost forecasting model.                            |
+| `06_evaluation.py`            | Evaluates the forecasting model using MAE, RMSE, MAPE and R².    |
+| `08_real_world_validation.py` | Validates the model on unseen real-world data.                   |
 
 # Power BI Dashboard
 
