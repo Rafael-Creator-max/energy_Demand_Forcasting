@@ -1,17 +1,91 @@
 ## Data Availability
 
+# Belgium Electricity Demand Forecasting
+
+An end-to-end data analytics project that forecasts hourly electricity demand in Belgium using machine learning.
+
+The project covers the complete data lifecycle, including data collection, ETL, exploratory analysis, feature engineering, forecasting, model evaluation, and business intelligence reporting with Power BI.
+
+---
+
+## Project Objectives
+
+- Build an end-to-end ETL pipeline
+- Perform exploratory data analysis
+- Engineer time-series features
+- Train a machine learning forecasting model
+- Evaluate forecasting accuracy
+- Create an interactive Power BI dashboard
+
+## Project Workflow
+
+Raw Data
+│
+▼
+ETL Pipeline
+│
+▼
+Clean Dataset
+│
+▼
+Feature Engineering
+│
+▼
+XGBoost Forecast
+│
+▼
+Evaluation
+│
+▼
+Power BI Dashboard
+
+## Scripts Description
+
+01_combine_load_files.py Combines yearly datasets
+02_clean_data.py Cleans and prepares the data
+03_eda.py Exploratory data analysis
+04_feature_engineering.py Creates predictive features
+05_forecast_model.py Trains the XGBoost model
+06_evaluation.py Evaluates model performance
+08_real_world_validation.py Tests the model on unseen data
+
+# Power BI Dashboard
+
+## Historical Analysis
+
+![Historical](images/historical_Analysis.png)
+
+---
+
+## Forecast Dashboard
+
+![Forecast](images/validation.png)
+
+---
+
+## Model Evaluation
+
+![Evaluation](images/model_Analysis.png)
+
+## Data
+
 The raw datasets used in this project are not included in this repository.
 
-The original files are relatively large and are publicly available from the data provider. To keep the repository lightweight and focused on the ETL pipeline, forecasting models, and analytics code, the raw data has been excluded from version control.
+The original files are relatively large and publicly available from the ENTSO-E Transparency Platform. To keep the repository lightweight, only the source code and documentation are included.
 
-To reproduce the project:
+To reproduce this project:
 
-1. Download the required datasets from the official data source.
-2. Place the files in the `data/` directory.
-3. Run the ETL scripts to prepare the data for analysis and forecasting.
+1. Download the datasets from ENTSO-E.
+2. Place them in `data/raw/`.
+3. Run the ETL pipeline.
+4. Train the forecasting model.
+5. Open the Power BI dashboard.
 
-Data Source:
+## Future Improvements
 
-- ENTSO-E Transparency Platform
-
-The repository contains all code, SQL scripts, and documentation necessary to reproduce the workflow once the data has been downloaded.
+- Weather integration
+- Holiday features
+- Longer forecasting horizon
+- Automated ETL pipeline
+- API deployment
+- Cloud deployment
