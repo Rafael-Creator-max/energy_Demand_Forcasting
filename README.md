@@ -1,5 +1,3 @@
-## Data Availability
-
 # Belgium Electricity Demand Forecasting
 
 An end-to-end data analytics project that forecasts hourly electricity demand in Belgium using machine learning.
@@ -19,25 +17,15 @@ The project covers the complete data lifecycle, including data collection, ETL, 
 
 ## Project Workflow
 
-Raw Data
-│
-▼
-ETL Pipeline
-│
-▼
-Clean Dataset
-│
-▼
-Feature Engineering
-│
-▼
-XGBoost Forecast
-│
-▼
-Evaluation
-│
-▼
-Power BI Dashboard
+```mermaid
+flowchart LR
+    A[Raw Data] --> B[ETL Pipeline]
+    B --> C[Clean Dataset]
+    C --> D[Feature Engineering]
+    D --> E[XGBoost Forecast]
+    E --> F[Evaluation]
+    F --> G[Power BI Dashboard]
+```
 
 ## Scripts Description
 
