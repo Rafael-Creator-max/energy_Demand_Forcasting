@@ -29,8 +29,6 @@ flowchart LR
 
 ## Scripts Description
 
-## Scripts Description
-
 | Script                        | Description                                                      |
 | ----------------------------- | ---------------------------------------------------------------- |
 | `01_combine_load_files.py`    | Combines yearly datasets.                                        |
